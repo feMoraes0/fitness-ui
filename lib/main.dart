@@ -38,7 +38,9 @@ class Home extends StatelessWidget {
                   ],
                 ),
                 Row(
-                  children: <Widget>[MainCard()],
+                  children: <Widget>[
+                    MainCard(),
+                  ],
                 )
               ],
             )),
