@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'components/MainCard.dart';
+import 'components/Section.dart';
 import 'components/UserPhoto.dart';
-import 'components/SectionTitle.dart';
 
 void main() => runApp(MyApp());
 
@@ -47,35 +47,25 @@ class Home extends StatelessWidget {
                   MainCard(),
                 ],
               ),
-              SectionTitle("Fat burning"),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
+              Section(
+                title: "Fat burning",
+                body: ListView(
+                  padding: EdgeInsets.only(left: 20.0),
+                  scrollDirection: Axis.horizontal,
                   children: <Widget>[
                     Container(
-                      width: 300.0,
-                      height: 10.0,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black)
-                      ),
-                    ),
-                    Container(
-                      width: 300.0,
-                      height: 10.0,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black)
-                      ),
-                    ),
-                    Container(
-                      width: 300.0,
-                      height: 10.0,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black)
-                      ),
+                      width: 360.0,
+                      color: Colors.red,
+                    ),Container(
+                      width: 360.0,
+                      color: Colors.blue,
+                    ),Container(
+                      width: 360.0,
+                      color: Colors.yellow,
                     ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),
