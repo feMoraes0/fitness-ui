@@ -12,7 +12,7 @@ class MainCard extends StatelessWidget {
       ),
       width: MediaQuery.of(context).size.width - 40,
       height: 230,
-      margin: EdgeInsets.only(top: 40.0),
+      margin: EdgeInsets.only(top: 40.0, left: 20.0, right: 20.0),
       decoration: BoxDecoration(
         image: DecorationImage(
             image: NetworkImage(

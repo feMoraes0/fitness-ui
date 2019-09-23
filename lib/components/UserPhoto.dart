@@ -7,6 +7,7 @@ class UserPhoto extends StatelessWidget {
       width: 54.0,
       height: 54.0,
       padding: EdgeInsets.all(10.0),
+      margin: EdgeInsets.only(right: 20.0),
       decoration: BoxDecoration(
         image: DecorationImage(
           image: NetworkImage(
