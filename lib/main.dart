@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'components/ImageCardWithBasicFooter.dart';
 import 'components/MainCard.dart';
 import 'components/Section.dart';
 import 'components/UserPhoto.dart';
@@ -28,6 +29,7 @@ class Home extends StatelessWidget {
             children: <Widget>[
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Container(
                     child: Text(
@@ -42,29 +44,29 @@ class Home extends StatelessWidget {
                   UserPhoto()
                 ],
               ),
-              Row(
-                children: <Widget>[
-                  MainCard(),
-                ],
-              ),
+              MainCard(),
               Section(
                 title: "Fat burning",
-                body: ListView(
-                  padding: EdgeInsets.only(left: 20.0),
-                  scrollDirection: Axis.horizontal,
-                  children: <Widget>[
-                    Container(
-                      width: 360.0,
-                      color: Colors.red,
-                    ),Container(
-                      width: 360.0,
-                      color: Colors.blue,
-                    ),Container(
-                      width: 360.0,
-                      color: Colors.yellow,
-                    ),
-                  ],
-                ),
+                horizontalList: <Widget>[
+                  ImageCardWithBasicFooter(
+                    "https://media-manager.noticiasaominuto.com/1920/naom_5caee2ff2dabd.jpg",
+                    "Easy Start",
+                    "5 min",
+                    "Low",
+                  ),
+                  ImageCardWithBasicFooter(
+                    "https://i.pinimg.com/originals/81/4f/aa/814faa73b363bde76e57e743161438ea.jpg",
+                    "Cardio Bit",
+                    "8 min",
+                    "Medium",
+                  ),
+                  ImageCardWithBasicFooter(
+                    "https://www.treinus.com.br/blog/wp-content/uploads/2018/03/O-que-e-HIIT-Entenda-como-ele-pode-te-ajudar-a-queimar-gordura-e-seus-beneficios.jpg",
+                    "Strong Start",
+                    "15 min",
+                    "Hight",
+                  ),
+                ],
               ),
             ],
           ),

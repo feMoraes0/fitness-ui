@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Section extends StatelessWidget {
-  final Widget body;
+  final List<Widget> horizontalList;
   final String title;
 
-  Section({this.title, this.body});
+  Section({this.title, this.horizontalList});
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +13,12 @@ class Section extends StatelessWidget {
       child: Column(
         children: <Widget>[
           SectionTitle(this.title),
-          Container(
-            height: 200.0,
-            child: this.body,
+          SingleChildScrollView(
+            padding: EdgeInsets.only(left: 20.0),
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: this.horizontalList
+            ),
           )
         ],
       ),
@@ -37,7 +40,8 @@ class SectionTitle extends StatelessWidget {
         child: Text(
           this._text,
           style: TextStyle(
-            fontSize: 20.0,
+            fontSize: 14.0,
+            fontWeight: FontWeight.w700,
           ),
         ),
       ),

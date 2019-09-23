@@ -22,9 +22,10 @@ class MainCard extends StatelessWidget {
         color: Colors.white70,
         boxShadow: [
           BoxShadow(
-              color: Colors.black38,
-              blurRadius: 25.0,
-              offset: Offset(8.0, 8.0)),
+            color: Colors.black38,
+            blurRadius: 25.0,
+            offset: Offset(8.0, 8.0),
+          ),
         ],
       ),
     );
@@ -35,7 +36,7 @@ class MainCardFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80.0,
+      height: 60.0,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -44,20 +45,21 @@ class MainCardFooter extends StatelessWidget {
             style: TextStyle(
               color: Colors.white,
               fontSize: 20.0,
+              fontWeight: FontWeight.w700,
             ),
           ),
           Text(
             "8 min",
             style: TextStyle(
               color: Colors.white,
-              fontSize: 14.0,
+              fontSize: 12.0,
             ),
           )
         ],
       ),
       padding: EdgeInsets.all(20.0),
       decoration: BoxDecoration(
-        color: Colors.grey[400].withOpacity(0.9),
+        color: Colors.grey[400].withOpacity(0.95),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(20.0),
           bottomRight: Radius.circular(20.0),
