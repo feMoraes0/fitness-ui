@@ -1,3 +1,4 @@
+import 'package:bezier_chart/bezier_chart.dart';
 import 'package:fitness_flutter/components/Header.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -131,6 +132,33 @@ class Results extends StatelessWidget {
                         color: Colors.grey,
                       ),
                     ),
+
+                    Container(
+                      height: 300.0,
+                      width: width - 40.0,
+                      margin: EdgeInsets.only(bottom: 30.0),
+                      child: BezierChart(
+                        bezierChartScale: BezierChartScale.CUSTOM,
+                        xAxisCustomValues: const [0, 3, 6, 9],
+                        series: const [
+                          BezierLine(
+                            lineColor: Color.fromRGBO(241, 227, 255, 1.0),
+                            lineStrokeWidth: 8.0,
+                            data: const [
+                              DataPoint<double>(value: 45, xAxis: 0),
+                              DataPoint<double>(value: 90, xAxis: 3),
+                              DataPoint<double>(value: 50, xAxis: 6),
+                              DataPoint<double>(value: 110, xAxis: 9)
+                            ],
+                          ),
+                        ],
+                        config: BezierChartConfig(
+                          xAxisTextStyle: TextStyle(color: Colors.blueGrey),
+                          backgroundColor: Colors.white,
+                        ),
+                      ),
+                    ),
+
                     Container(
                       child: Row(
                         children: <Widget>[
