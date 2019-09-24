@@ -1,16 +1,21 @@
-# fitness_flutter
+<h1 align="center">Fitness UI</h1>
 
-A new Flutter project.
+## Prints
 
-## Getting Started
+<p align="center">
+<img width="300" src="https://i.pinimg.com/originals/e6/81/f5/e681f5708881d52f5e2b8676077b895b.png"/>
+</p>
 
-This project is a starting point for a Flutter application.
+## Running the project
+>To run this project you will need flutter and git installed.
 
-A few resources to get you started if this is your first Flutter project:
+```$bash
+# Clone this repository
+$ git clone https://github.com/femoraes0/fitness-ui.git
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# Install packages
+$ flutter packages get
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Run
+$ flutter run
+```
