@@ -18,6 +18,7 @@ class Header extends StatelessWidget {
             this._title,
             style: TextStyle(
               fontSize: 28,
+              color: Colors.grey[600],
               fontWeight: FontWeight.w700,
             ),
           ),

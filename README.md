@@ -3,8 +3,8 @@
 ## Prints
 
 <p align="center">
-<img width="300" src="https://i.pinimg.com/originals/e6/81/f5/e681f5708881d52f5e2b8676077b895b.png"/>
-</p>
+<img width="250" src="https://i.pinimg.com/originals/a0/21/31/a021311bebadf7213d3005e0067298e6.png"/>
+<img width="250" src="https://i.pinimg.com/originals/4a/23/77/4a237708432a420c3d8e2f2f74fc8e1a.png"/></p>
 
 ## Running the project
 >To run this project you will need flutter and git installed.

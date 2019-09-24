@@ -132,9 +132,8 @@ class Results extends StatelessWidget {
                         color: Colors.grey,
                       ),
                     ),
-
                     Container(
-                      height: 300.0,
+                      height: 250.0,
                       width: width - 40.0,
                       margin: EdgeInsets.only(bottom: 30.0),
                       child: BezierChart(
@@ -146,14 +145,15 @@ class Results extends StatelessWidget {
                             lineStrokeWidth: 8.0,
                             data: const [
                               DataPoint<double>(value: 45, xAxis: 0),
-                              DataPoint<double>(value: 90, xAxis: 3),
-                              DataPoint<double>(value: 50, xAxis: 6),
-                              DataPoint<double>(value: 110, xAxis: 9)
+                              DataPoint<double>(value: 80, xAxis: 3),
+                              DataPoint<double>(value: 55, xAxis: 6),
+                              DataPoint<double>(value: 100, xAxis: 9)
                             ],
                           ),
                         ],
                         config: BezierChartConfig(
                           xAxisTextStyle: TextStyle(color: Colors.blueGrey),
+                          startYAxisFromNonZeroValue: true,
                           backgroundColor: Colors.white,
                         ),
                       ),
