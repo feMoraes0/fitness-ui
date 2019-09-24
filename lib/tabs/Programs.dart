@@ -1,4 +1,5 @@
 import 'package:fitness_flutter/components/DailyTip.dart';
+import 'package:fitness_flutter/components/Header.dart';
 import 'package:fitness_flutter/components/ImageCardWithInternal.dart';
 import 'package:fitness_flutter/components/UserTip.dart';
 import 'package:fitness_flutter/components/ImageCardWithBasicFooter.dart';
@@ -19,22 +20,9 @@ class Programs extends StatelessWidget {
             padding: EdgeInsets.only(top: 20.0),
             child: Column(
               children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      child: Text(
-                        "Programs",
-                        style: TextStyle(
-                          fontSize: 28,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      margin: EdgeInsets.only(left: 20.0),
-                    ),
-                    UserPhoto()
-                  ],
+                Header(
+                  "Programs",
+                  rightSide: UserPhoto(),
                 ),
                 MainCard(), // MainCard
                 Section(
@@ -115,14 +103,14 @@ class Programs extends StatelessWidget {
                           DailyTip(),
                           DailyTip(),
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),
               ],
             ),
           ),
-        )
+        ),
       ),
     );
   }
