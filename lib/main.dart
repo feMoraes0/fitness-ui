@@ -1,10 +1,12 @@
+import 'package:fitness_flutter/components/DailyTip.dart';
 import 'package:fitness_flutter/components/ImageCardWithInternal.dart';
-import 'package:flutter/material.dart';
+import 'package:fitness_flutter/components/UserTip.dart';
+import 'package:fitness_flutter/components/ImageCardWithBasicFooter.dart';
+import 'package:fitness_flutter/components/MainCard.dart';
+import 'package:fitness_flutter/components/Section.dart';
+import 'package:fitness_flutter/components/UserPhoto.dart';
 
-import 'components/ImageCardWithBasicFooter.dart';
-import 'components/MainCard.dart';
-import 'components/Section.dart';
-import 'components/UserPhoto.dart';
+import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
@@ -89,7 +91,46 @@ class Home extends StatelessWidget {
                       "7 min",
                     ),
                   ],
-                )
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 50.0),
+                  padding: EdgeInsets.only(top: 10.0, bottom: 40.0),
+                  decoration: BoxDecoration(
+                    color: Colors.blue[50],
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      Section(
+                        title: "Daily Tips",
+                        horizontalList: <Widget>[
+                          UserTip(
+                            "http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg",
+                            "User Img"
+                          ),
+                          UserTip(
+                            "http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg",
+                            "User Img"
+                          ),
+                          UserTip(
+                            "http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg",
+                            "User Img"
+                          ),
+                          UserTip(
+                            "http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg",
+                            "User Img"
+                          ),
+                        ],
+                      ),
+                      Section(
+                        horizontalList: <Widget>[
+                          DailyTip(),
+                          DailyTip(),
+                          DailyTip(),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
               ],
             ),
           ),

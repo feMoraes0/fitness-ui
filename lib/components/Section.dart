@@ -12,12 +12,12 @@ class Section extends StatelessWidget {
       margin: EdgeInsets.only(top: 35.0),
       child: Column(
         children: <Widget>[
-          SectionTitle(this.title),
+          SectionTitle((this.title != null ) ? this.title : ""),
           SingleChildScrollView(
-            padding: EdgeInsets.only(left: 20.0),
+            padding: EdgeInsets.only(left: 20.0, top: 10.0),
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: this.horizontalList
+              children: (this.horizontalList != null ) ? this.horizontalList : []
             ),
           )
         ],
@@ -34,7 +34,7 @@ class SectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 20.0, bottom: 10.0),
+      margin: EdgeInsets.only(left: 20.0),
       child: Align(
         alignment: Alignment.bottomLeft,
         child: Text(
