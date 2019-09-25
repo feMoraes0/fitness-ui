@@ -14,6 +14,7 @@ class Header extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Container(
+          alignment: Alignment.center,
           child: Text(
             this._title,
             style: TextStyle(
@@ -23,6 +24,7 @@ class Header extends StatelessWidget {
             ),
           ),
           margin: EdgeInsets.only(left: 20.0),
+          height: 54.0,
         ),
         (this.rightSide != null) ? this.rightSide : Container()
       ],
