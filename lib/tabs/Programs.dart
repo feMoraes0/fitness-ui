@@ -9,9 +9,6 @@ import 'package:fitness_flutter/components/UserPhoto.dart';
 import 'package:flutter/material.dart';
 
 class Programs extends StatelessWidget {
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

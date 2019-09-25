@@ -7,11 +7,10 @@ class ImageCardWithBasicFooter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width - 130.0;
     return Column(
       children: <Widget>[
         Container(
-          width: width,
+          width: 290.0,
           height: 160.0,
           margin: EdgeInsets.only(right: 20.0),
           child: ClipRRect(
@@ -20,7 +19,7 @@ class ImageCardWithBasicFooter extends StatelessWidget {
           ),
         ),
         Container(
-          width: width,
+          width: 290.0,
           margin: EdgeInsets.only(top: 10.0),
           child: Text(
             this._name,
@@ -29,7 +28,7 @@ class ImageCardWithBasicFooter extends StatelessWidget {
           ),
         ),
         Container(
-          width: width,
+          width: 290.0,
           margin: EdgeInsets.only(top: 5.0),
           child: Text(
             this._duration + "    |    " + this._level,
