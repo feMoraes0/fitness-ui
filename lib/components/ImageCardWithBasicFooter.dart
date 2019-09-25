@@ -1,21 +1,25 @@
 import 'package:flutter/material.dart';
 
 class ImageCardWithBasicFooter extends StatelessWidget {
-  final String _image, _name, _duration, _level;
+  final String _image, _name, _duration, _level, tag;
 
-  ImageCardWithBasicFooter(this._image, this._name, this._duration, this._level);
+  ImageCardWithBasicFooter(this._image, this._name, this._duration,
+    this._level, this.tag);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Container(
-          width: 290.0,
-          height: 160.0,
-          margin: EdgeInsets.only(right: 20.0),
-          child: ClipRRect(
-            child: Image.network(this._image, fit: BoxFit.fill),
-            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+        Hero(
+          tag: this.tag,
+          child: Container(
+            width: 290.0,
+            height: 160.0,
+            margin: EdgeInsets.only(right: 20.0),
+            child: ClipRRect(
+              child: Image.network(this._image, fit: BoxFit.fill),
+              borderRadius: BorderRadius.all(Radius.circular(20.0)),
+            ),
           ),
         ),
         Container(

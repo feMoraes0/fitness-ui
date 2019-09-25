@@ -5,6 +5,7 @@ import 'package:fitness_flutter/components/UserTip.dart';
 import 'package:fitness_flutter/components/ImageCardWithBasicFooter.dart';
 import 'package:fitness_flutter/components/Section.dart';
 import 'package:fitness_flutter/components/UserPhoto.dart';
+import 'package:fitness_flutter/pages/ActivityDetail.dart';
 
 import 'package:flutter/material.dart';
 
@@ -27,23 +28,39 @@ class Programs extends StatelessWidget {
                 Section(
                   title: "Fat burning",
                   horizontalList: <Widget>[
-                    ImageCardWithBasicFooter(
-                      "https://media-manager.noticiasaominuto.com/1920/naom_5caee2ff2dabd.jpg",
-                      "Easy Start",
-                      "5 min",
-                      "Low",
+                    GestureDetector(
+                      child: ImageCardWithBasicFooter(
+                        "https://media-manager.noticiasaominuto.com/1920/naom_5caee2ff2dabd.jpg",
+                        "Easy Start",
+                        "5 min",
+                        "Low",
+                        "imageHeader"
+                      ),
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (_) {
+                              return ActivityDetail(
+                                tag: "imageHeader",
+                                image: "https://media-manager.noticiasaominuto.com/1920/naom_5caee2ff2dabd.jpg"
+                              );
+                            },
+                          ),
+                        );
+                      },
                     ),
                     ImageCardWithBasicFooter(
                       "https://i.pinimg.com/originals/81/4f/aa/814faa73b363bde76e57e743161438ea.jpg",
                       "Cardio Bit",
                       "8 min",
                       "Medium",
+                      "imageHeader2"
                     ),
                     ImageCardWithBasicFooter(
                       "https://www.treinus.com.br/blog/wp-content/uploads/2018/03/O-que-e-HIIT-Entenda-como-ele-pode-te-ajudar-a-queimar-gordura-e-seus-beneficios.jpg",
                       "Strong Start",
                       "15 min",
                       "Hight",
+                      "imageHeader3"
                     ),
                   ],
                 ),
