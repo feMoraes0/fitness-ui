@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'Timer.dart';
 
 class ActivityDetail extends StatelessWidget {
   final String image, tag;
@@ -21,7 +22,6 @@ class ActivityDetail extends StatelessWidget {
                   child: Container(
                     width: MediaQuery.of(context).size.width,
                     height: 270,
-                    margin: EdgeInsets.only(bottom: 30.0),
                     child: Image.network(this.image, fit: BoxFit.fitHeight),
                   ),
                 ),
@@ -51,8 +51,7 @@ class ActivityDetail extends StatelessWidget {
             Stack(
               children: <Widget>[
                 Container(
-                    padding:
-                        EdgeInsets.only(left: 20.0, bottom: 20.0, right: 20.0),
+                    padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 20.0),
                     width: width,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -139,25 +138,38 @@ class ActivityDetail extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: Container(
-        margin: EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
-        padding: EdgeInsets.all(15.0),
-        decoration: BoxDecoration(
-            color: Color.fromRGBO(100, 140, 255, 1.0),
-            borderRadius: BorderRadius.circular(15.0),
-            boxShadow: [
-              BoxShadow(
-                color: Color.fromRGBO(100, 140, 255, 0.5),
-                blurRadius: 10.0,
-                offset: Offset(0.0, 5.0),
-              ),
-            ]),
-        child: Text(
-          "Start",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              fontSize: 22.0, fontWeight: FontWeight.w900, color: Colors.white),
+      bottomNavigationBar: GestureDetector(
+        child: Container(
+          margin: EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
+          padding: EdgeInsets.all(15.0),
+          decoration: BoxDecoration(
+              color: Color.fromRGBO(100, 140, 255, 1.0),
+              borderRadius: BorderRadius.circular(15.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Color.fromRGBO(100, 140, 255, 0.5),
+                  blurRadius: 10.0,
+                  offset: Offset(0.0, 5.0),
+                ),
+              ]),
+          child: Text(
+            "Start",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 22.0,
+              fontWeight: FontWeight.w900,
+              color: Colors.white,
+            ),
+          ),
         ),
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) {
+              return ActivityTimer();
+            }),
+          );
+        },
       ),
     );
   }
