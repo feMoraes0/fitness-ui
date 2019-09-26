@@ -1,5 +1,6 @@
 
 
+import 'package:fitness_flutter/tabs/Diet.dart';
 import 'package:fitness_flutter/tabs/Programs.dart';
 import 'package:fitness_flutter/tabs/Results.dart';
 import 'package:flutter/material.dart';
@@ -26,9 +27,7 @@ class Tabs extends StatelessWidget {
         body: TabBarView(
           children: <Widget>[
             Programs(),
-            Container(
-              color: Colors.redAccent,
-            ),
+            Diet(),
             Results(),
           ],
         ),

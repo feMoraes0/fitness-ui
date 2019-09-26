@@ -125,9 +125,22 @@ class ActivityDetail extends StatelessWidget {
                           margin: EdgeInsets.only(top: 15.0),
                           child: Column(
                             children: <Widget>[
-                              Step(),
-                              Step(),
-                              Step(),
+                              Step(
+                                image: "https://www.sportswallah"
+                                  ".com/wp-content/uploads/2019/01/plank-fitness-exercise.jpg",
+                                title: "Plank",
+                                seconds: 50
+                              ),
+                              Step(
+                                image: "https://tonygentilcore.com/wp-content/uploads/2016/02/Female-push-up.jpg",
+                                title: "Push-ups",
+                                seconds: 50
+                              ),
+                              Step(
+                                image: "https://www.crunch.com.au/wp-content/uploads/2019/01/arm-kettlebell-exercises.jpg",
+                                title: "Lateral Raise",
+                                seconds: 50
+                              ),
                             ],
                           ),
                         ),
@@ -176,6 +189,12 @@ class ActivityDetail extends StatelessWidget {
 }
 
 class Step extends StatelessWidget {
+
+  final String image, title;
+  final int seconds;
+
+  Step({@required this.image, @required this.title, @required this.seconds});
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -187,8 +206,7 @@ class Step extends StatelessWidget {
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: NetworkImage(
-                    "http://media2.s-nbcnews"
-                    ".com/i/MSNBC/Components/Video/201701/x_tdy_ov_5_tone_legs_170131.jpg",
+                    this.image,
                   ),
                   fit: BoxFit.fitHeight),
               borderRadius: BorderRadius.circular(15.0)),
@@ -199,11 +217,11 @@ class Step extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  "Kneeling Kickbacks",
+                  this.title,
                   style: TextStyle(fontSize: 16.0, color: Colors.black87),
                 ),
                 Text(
-                  "50 sec",
+                  this.seconds.toString() + " sec",
                   style: TextStyle(fontSize: 14.0, color: Colors.blueGrey[200]),
                 )
               ],
