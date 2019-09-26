@@ -126,8 +126,7 @@ class ActivityDetail extends StatelessWidget {
                           child: Column(
                             children: <Widget>[
                               Step(
-                                image: "https://www.sportswallah"
-                                  ".com/wp-content/uploads/2019/01/plank-fitness-exercise.jpg",
+                                image: "https://i0.wp.com/fitnessrunning.net/wp-content/uploads/2016/10/woman-doing-plank.jpg",
                                 title: "Plank",
                                 seconds: 50
                               ),

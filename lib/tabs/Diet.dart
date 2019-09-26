@@ -69,6 +69,22 @@ class Diet extends StatelessWidget {
                 indicatorColor: Color.fromRGBO(215, 225, 255, 1.0),
               ),
             ),
+            body: TabBarView(
+              children: <Widget>[
+                Container(
+                  color: Colors.redAccent,
+                ),
+                Container(
+                  color: Colors.blueAccent,
+                ),
+                Container(
+                  color: Colors.greenAccent,
+                ),
+                Container(
+                  color: Colors.yellowAccent,
+                ),
+              ],
+            )
           ),
         ),
       ),
