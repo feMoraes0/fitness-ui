@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ImageCardWithBasicFooter extends StatelessWidget {
@@ -16,13 +17,13 @@ class ImageCardWithBasicFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Hero(
           tag: this.tag,
           child: Container(
             width: this.imageWidth,
             height: 160.0,
-            margin: EdgeInsets.only(right: 20.0),
             child: ClipRRect(
               child: Image.network(this.image, fit: BoxFit.fill),
               borderRadius: BorderRadius.all(Radius.circular(20.0)),

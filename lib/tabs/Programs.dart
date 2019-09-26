@@ -28,39 +28,48 @@ class Programs extends StatelessWidget {
                 Section(
                   title: "Fat burning",
                   horizontalList: <Widget>[
-                    GestureDetector(
+                    Container(
+                      margin: EdgeInsets.only(right: 20.0),
+                      child: GestureDetector(
+                        child: ImageCardWithBasicFooter(
+                          image: "https://media-manager.noticiasaominuto.com/1920/naom_5caee2ff2dabd.jpg",
+                          title: "Easy Start",
+                          firstInfo: "5 min",
+                          secondInfo: "Low",
+                          tag: "imageHeader"
+                        ),
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(
+                              builder: (_) {
+                                return ActivityDetail(
+                                  tag: "imageHeader",
+                                  image: "https://media-manager.noticiasaominuto.com/1920/naom_5caee2ff2dabd.jpg"
+                                );
+                              },
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(right: 20.0),
                       child: ImageCardWithBasicFooter(
-                        image: "https://media-manager.noticiasaominuto.com/1920/naom_5caee2ff2dabd.jpg",
+                        image: "https://i.pinimg.com/originals/81/4f/aa/814faa73b363bde76e57e743161438ea.jpg",
                         title: "Easy Start",
                         firstInfo: "5 min",
                         secondInfo: "Low",
-                        tag: "imageHeader"
+                        tag: "imageHeader2"
                       ),
-                      onTap: () {
-                        Navigator.push(context, MaterialPageRoute(
-                            builder: (_) {
-                              return ActivityDetail(
-                                tag: "imageHeader",
-                                image: "https://media-manager.noticiasaominuto.com/1920/naom_5caee2ff2dabd.jpg"
-                              );
-                            },
-                          ),
-                        );
-                      },
                     ),
-                    ImageCardWithBasicFooter(
-                      image: "https://i.pinimg.com/originals/81/4f/aa/814faa73b363bde76e57e743161438ea.jpg",
-                      title: "Easy Start",
-                      firstInfo: "5 min",
-                      secondInfo: "Low",
-                      tag: "imageHeader2"
-                    ),
-                    ImageCardWithBasicFooter(
-                      image: "https://www.treinus.com.br/blog/wp-content/uploads/2018/03/O-que-e-HIIT-Entenda-como-ele-pode-te-ajudar-a-queimar-gordura-e-seus-beneficios.jpg",
-                      title: "Easy Start",
-                      firstInfo: "5 min",
-                      secondInfo: "Low",
-                      tag: "imageHeader3"
+                    Container(
+                      margin: EdgeInsets.only(right: 20.0),
+                      child: ImageCardWithBasicFooter(
+                        image: "https://www.treinus.com.br/blog/wp-content/uploads/2018/03/O-que-e-HIIT-Entenda-como-ele-pode-te-ajudar-a-queimar-gordura-e-seus-beneficios.jpg",
+                        title: "Easy Start",
+                        firstInfo: "5 min",
+                        secondInfo: "Low",
+                        tag: "imageHeader3"
+                      ),
                     ),
                   ],
                 ),
