@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 
 class ImageCardWithBasicFooter extends StatelessWidget {
-  final String _image, _name, _duration, _level, tag;
+  final String image, title, firstInfo, secondInfo, tag;
+  double imageWidth = 290.0;
 
-  ImageCardWithBasicFooter(this._image, this._name, this._duration,
-    this._level, this.tag);
+  ImageCardWithBasicFooter({
+    @required this.image,
+    @required this.title,
+    @required this.firstInfo,
+    @required this.secondInfo,
+    @required this.tag,
+    this.imageWidth
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,29 +20,29 @@ class ImageCardWithBasicFooter extends StatelessWidget {
         Hero(
           tag: this.tag,
           child: Container(
-            width: 290.0,
+            width: this.imageWidth,
             height: 160.0,
             margin: EdgeInsets.only(right: 20.0),
             child: ClipRRect(
-              child: Image.network(this._image, fit: BoxFit.fill),
+              child: Image.network(this.image, fit: BoxFit.fill),
               borderRadius: BorderRadius.all(Radius.circular(20.0)),
             ),
           ),
         ),
         Container(
-          width: 290.0,
+          width: this.imageWidth,
           margin: EdgeInsets.only(top: 10.0),
           child: Text(
-            this._name,
+            this.title,
             textAlign: TextAlign.left,
             style: TextStyle(fontSize: 14.0),
           ),
         ),
         Container(
-          width: 290.0,
+          width: this.imageWidth,
           margin: EdgeInsets.only(top: 5.0),
           child: Text(
-            this._duration + "    |    " + this._level,
+            this.firstInfo + "    |    " + this.secondInfo,
             style: TextStyle(fontSize: 12.0, color: Colors.grey),
           ),
         )

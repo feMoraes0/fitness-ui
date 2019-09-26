@@ -30,11 +30,11 @@ class Programs extends StatelessWidget {
                   horizontalList: <Widget>[
                     GestureDetector(
                       child: ImageCardWithBasicFooter(
-                        "https://media-manager.noticiasaominuto.com/1920/naom_5caee2ff2dabd.jpg",
-                        "Easy Start",
-                        "5 min",
-                        "Low",
-                        "imageHeader"
+                        image: "https://media-manager.noticiasaominuto.com/1920/naom_5caee2ff2dabd.jpg",
+                        title: "Easy Start",
+                        firstInfo: "5 min",
+                        secondInfo: "Low",
+                        tag: "imageHeader"
                       ),
                       onTap: () {
                         Navigator.push(context, MaterialPageRoute(
@@ -49,18 +49,18 @@ class Programs extends StatelessWidget {
                       },
                     ),
                     ImageCardWithBasicFooter(
-                      "https://i.pinimg.com/originals/81/4f/aa/814faa73b363bde76e57e743161438ea.jpg",
-                      "Cardio Bit",
-                      "8 min",
-                      "Medium",
-                      "imageHeader2"
+                      image: "https://i.pinimg.com/originals/81/4f/aa/814faa73b363bde76e57e743161438ea.jpg",
+                      title: "Easy Start",
+                      firstInfo: "5 min",
+                      secondInfo: "Low",
+                      tag: "imageHeader2"
                     ),
                     ImageCardWithBasicFooter(
-                      "https://www.treinus.com.br/blog/wp-content/uploads/2018/03/O-que-e-HIIT-Entenda-como-ele-pode-te-ajudar-a-queimar-gordura-e-seus-beneficios.jpg",
-                      "Strong Start",
-                      "15 min",
-                      "Hight",
-                      "imageHeader3"
+                      image: "https://www.treinus.com.br/blog/wp-content/uploads/2018/03/O-que-e-HIIT-Entenda-como-ele-pode-te-ajudar-a-queimar-gordura-e-seus-beneficios.jpg",
+                      title: "Easy Start",
+                      firstInfo: "5 min",
+                      secondInfo: "Low",
+                      tag: "imageHeader3"
                     ),
                   ],
                 ),

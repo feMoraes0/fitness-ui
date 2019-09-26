@@ -12,7 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(fontFamily: 'Geometria'),
-      home: Tabs(),
+      home: Scaffold(
+        body: Tabs(),
+      ),
     );
   }
 }

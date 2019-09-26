@@ -1,4 +1,5 @@
 import 'package:fitness_flutter/components/Header.dart';
+import 'package:fitness_flutter/components/ImageCardWithBasicFooter.dart';
 import 'package:flutter/material.dart';
 
 import '../data/Dishes.dart';
@@ -97,13 +98,29 @@ class TabViewBase extends StatelessWidget {
 
   TabViewBase({@required this.tabName});
 
+  List<Widget> _renderItem(size) {
+    return List<Widget>.generate(dishes.length, (index) {
+      var tag = dishes[index]["title"] + index.toString();
+      return Container(
+        margin: EdgeInsets.symmetric(vertical: 20.0),
+        child: ImageCardWithBasicFooter(
+          image: dishes[index]["image"],
+          title: dishes[index]["title"],
+          firstInfo: dishes[index]["time"],
+          secondInfo: dishes[index]["calories"],
+          tag: tag,
+          imageWidth: size.width,
+        ),
+      );
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Container(
         padding: EdgeInsets.all(20.0),
-
         width: size.width,
         color: Colors.white,
         child: Column(
@@ -132,18 +149,14 @@ class TabViewBase extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              height: size.height,
-              child: ListView.builder(
-                itemCount: dishes.length,
-                itemBuilder: (context, index) {
-                  return Text(dishes[index]["title"]);
-                },
-              ),
-            )
+            Column(
+              children: this._renderItem(size)
+            ),
           ],
         ),
       ),
     );
   }
 }
+
+
