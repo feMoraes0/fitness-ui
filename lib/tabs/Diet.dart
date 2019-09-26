@@ -1,6 +1,8 @@
 import 'package:fitness_flutter/components/Header.dart';
 import 'package:flutter/material.dart';
 
+import '../data/Dishes.dart';
+
 class Diet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -10,82 +12,136 @@ class Diet extends StatelessWidget {
         child: DefaultTabController(
           length: 4,
           child: Scaffold(
-            appBar: AppBar(
-              elevation: 0,
-              backgroundColor: Colors.white,
-              flexibleSpace: Header(
-                "Diet",
-                rightSide: Container(
-                  height: 35.0,
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  margin: EdgeInsets.only(right: 20.0),
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(100, 140, 255, 1.0),
-                    borderRadius: BorderRadius.circular(20.0),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Tracker",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w900,
+              appBar: AppBar(
+                elevation: 0,
+                backgroundColor: Colors.white,
+                flexibleSpace: Header(
+                  "Diet",
+                  rightSide: Container(
+                    height: 35.0,
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    margin: EdgeInsets.only(right: 20.0),
+                    decoration: BoxDecoration(
+                      color: Color.fromRGBO(100, 140, 255, 1.0),
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Tracker",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w900,
+                        ),
                       ),
                     ),
                   ),
                 ),
+                bottom: TabBar(
+                  tabs: <Widget>[
+                    Container(
+                      height: 30.0,
+                      child: Tab(
+                        text: "Breakfast",
+                      ),
+                    ),
+                    Container(
+                      height: 30.0,
+                      child: Tab(
+                        text: "Lunch",
+                      ),
+                    ),
+                    Container(
+                      height: 30.0,
+                      child: Tab(
+                        text: "Dinner",
+                      ),
+                    ),
+                    Container(
+                      height: 30.0,
+                      child: Tab(
+                        text: "Snacks",
+                      ),
+                    ),
+                  ],
+                  labelColor: Colors.black87,
+                  unselectedLabelColor: Colors.grey[400],
+                  indicatorWeight: 4.0,
+                  indicatorSize: TabBarIndicatorSize.label,
+                  indicatorColor: Color.fromRGBO(215, 225, 255, 1.0),
+                ),
               ),
-              bottom: TabBar(
-                tabs: <Widget>[
-                  Container(
-                    height: 30.0,
-                    child: Tab(
-                      text: "Breakfast",
-                    ),
+              body: TabBarView(
+                children: <Widget>[
+                  TabViewBase(
+                    tabName: "Breakfast",
                   ),
-                  Container(
-                    height: 30.0,
-                    child: Tab(
-                      text: "Lunch",
-                    ),
+                  TabViewBase(
+                    tabName: "Lunch",
                   ),
-                  Container(
-                    height: 30.0,
-                    child: Tab(
-                      text: "Dinner",
-                    ),
+                  TabViewBase(
+                    tabName: "Dinner",
                   ),
-                  Container(
-                    height: 30.0,
-                    child: Tab(
-                      text: "Snacks",
-                    ),
+                  TabViewBase(
+                    tabName: "Snacks",
                   ),
-
                 ],
-                labelColor: Colors.black87,
-                unselectedLabelColor: Colors.grey[400],
-                indicatorWeight: 4.0,
-                indicatorSize: TabBarIndicatorSize.label,
-                indicatorColor: Color.fromRGBO(215, 225, 255, 1.0),
+              )),
+        ),
+      ),
+    );
+  }
+}
+
+class TabViewBase extends StatelessWidget {
+  final String tabName;
+
+  TabViewBase({@required this.tabName});
+
+  @override
+  Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    return SingleChildScrollView(
+      child: Container(
+        padding: EdgeInsets.all(20.0),
+
+        width: size.width,
+        color: Colors.white,
+        child: Column(
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.all(20.0),
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(219, 228, 255, 1.0),
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Text(
+                    "Track my " + this.tabName,
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      color: Color.fromRGBO(122, 158, 255, 1.0),
+                    ),
+                  ),
+                  Icon(
+                    Icons.add,
+                    size: 25.0,
+                    color: Color.fromRGBO(122, 158, 255, 1.0),
+                  )
+                ],
               ),
             ),
-            body: TabBarView(
-              children: <Widget>[
-                Container(
-                  color: Colors.redAccent,
-                ),
-                Container(
-                  color: Colors.blueAccent,
-                ),
-                Container(
-                  color: Colors.greenAccent,
-                ),
-                Container(
-                  color: Colors.yellowAccent,
-                ),
-              ],
+            Container(
+              height: size.height,
+              child: ListView.builder(
+                itemCount: dishes.length,
+                itemBuilder: (context, index) {
+                  return Text(dishes[index]["title"]);
+                },
+              ),
             )
-          ),
+          ],
         ),
       ),
     );
