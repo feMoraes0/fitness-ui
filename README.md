@@ -48,4 +48,3 @@ $ flutter run
 
 ## Contact
 - [LinkedIn](https://www.linkedin.com/in/fernando-moraes-48a26916a/)
-- [Email](fernandomoraes.lopes@gmail.com)
