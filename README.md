@@ -18,7 +18,7 @@
 <img width="200" src="https://i.pinimg.com/originals/52/08/76/52087695529a2ca85c646660d1e63dfd.jpg"/>
 </p>
 
-## Knowledges applied
+## Knowledges
 This knowledges are basic for flutter developers (maybe all developers...) but was my first 'project' made in flutter so... starting with basic :P
 
 - Flutter structure and mentality to make a new screen;
@@ -29,22 +29,27 @@ This knowledges are basic for flutter developers (maybe all developers...) but w
 > I learned to NEVER use tab navigation inside tab navigation, horrible to develop and interact with swipe using this "solution" - NEVER DO THIS!
 
 
-## Running the project
-To run this project you will need [flutter](https://flutter.dev/) and [git](https://git-scm.com/) installed.
+## How to use
+
+To clone and run this application, you'll need [Git](https://git-scm.com/downloads) and [Flutter](https://flutter.dev/docs/get-started/install) installed on your computer. From your command line:
 
 ```$bash
 # Clone this repository
 $ git clone https://github.com/femoraes0/fitness-ui.git
 
-# Access new folder
+# Go into the repository
 $ cd fitness-ui
 
 # Install packages
 $ flutter packages get
 
-# Run
+# Run the app
 $ flutter run
 ```
 
+## Credits
+  - <a target="_blank" href="https://www.behance.net/gallery/75220505/Fitness-Lab">Design</a>
+
 ## Contact
-- [LinkedIn](https://www.linkedin.com/in/fernando-moraes-48a26916a/)
+  - <a target="_blank" href="https://www.linkedin.com/in/fernando-moraes-48a26916a/">LinkedIn</a>
+  - <a target="_blank" href="mailto:fernandomoraes.lopes@gmail.com">E-mail</a>
