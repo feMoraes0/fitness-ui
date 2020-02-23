@@ -25,8 +25,15 @@ class ImageCardWithBasicFooter extends StatelessWidget {
             width: this.imageWidth,
             height: 160.0,
             child: ClipRRect(
-              child: Image.network(this.image, fit: BoxFit.fill),
-              borderRadius: BorderRadius.all(Radius.circular(20.0)),
+              child: Image.network(
+                this.image,
+                fit: BoxFit.fill,
+              ),
+              borderRadius: BorderRadius.all(
+                Radius.circular(
+                  20.0,
+                ),
+              ),
             ),
           ),
         ),
@@ -44,7 +51,10 @@ class ImageCardWithBasicFooter extends StatelessWidget {
           margin: EdgeInsets.only(top: 5.0),
           child: Text(
             this.firstInfo + "    |    " + this.secondInfo,
-            style: TextStyle(fontSize: 12.0, color: Colors.grey),
+            style: TextStyle(
+              fontSize: 12.0,
+              color: Colors.grey,
+            ),
           ),
         )
       ],
