@@ -100,7 +100,7 @@ class TabViewBase extends StatelessWidget {
 
   TabViewBase({@required this.tabName});
 
-  List<Widget> _renderItem(size) {
+  List<Widget> _renderItem(Size size) {
     return List<Widget>.generate(dishes.length, (index) {
       var tag = dishes[index]["title"] + index.toString();
       Exercise exercise = Exercise(
@@ -122,7 +122,7 @@ class TabViewBase extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Container(
         padding: EdgeInsets.all(20.0),
