@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class ImageCardWithBasicFooter extends StatelessWidget {
   final String image, title, firstInfo, secondInfo, tag;
-  double imageWidth = 290.0;
+  final double imageWidth;
 
   ImageCardWithBasicFooter({
     @required this.image,
@@ -11,7 +11,7 @@ class ImageCardWithBasicFooter extends StatelessWidget {
     @required this.firstInfo,
     @required this.secondInfo,
     @required this.tag,
-    this.imageWidth
+    this.imageWidth = 290.0,
   });
 
   @override
