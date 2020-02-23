@@ -5,11 +5,36 @@ import 'package:fitness_flutter/components/UserTip.dart';
 import 'package:fitness_flutter/components/ImageCardWithBasicFooter.dart';
 import 'package:fitness_flutter/components/Section.dart';
 import 'package:fitness_flutter/components/UserPhoto.dart';
+import 'package:fitness_flutter/models/exercise.dart';
 import 'package:fitness_flutter/pages/Activity/Detail.dart';
 
 import 'package:flutter/material.dart';
 
 class Programs extends StatelessWidget {
+  final List<Exercise> exercises = [
+    Exercise(
+      image:
+          "https://media-manager.noticiasaominuto.com/1920/naom_5caee2ff2dabd.jpg",
+      title: "Easy Start",
+      time: "5 min",
+      difficult: "Low",
+    ),
+    Exercise(
+      image:
+          "https://i.pinimg.com/originals/81/4f/aa/814faa73b363bde76e57e743161438ea.jpg",
+      title: "Easy Start",
+      time: "5 min",
+      difficult: "Low",
+    ),
+    Exercise(
+      image:
+          "https://www.treinus.com.br/blog/wp-content/uploads/2018/03/O-que-e-HIIT-Entenda-como-ele-pode-te-ajudar-a-queimar-gordura-e-seus-beneficios.jpg",
+      title: "Easy Start",
+      time: "5 min",
+      difficult: "Low",
+    )
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,19 +57,18 @@ class Programs extends StatelessWidget {
                       margin: EdgeInsets.only(right: 20.0),
                       child: GestureDetector(
                         child: ImageCardWithBasicFooter(
-                          image: "https://media-manager.noticiasaominuto.com/1920/naom_5caee2ff2dabd.jpg",
-                          title: "Easy Start",
-                          firstInfo: "5 min",
-                          secondInfo: "Low",
-                          tag: "imageHeader"
+                          exercise: this.exercises[0],
+                          tag: "imageHeader",
                         ),
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
                               builder: (_) {
                                 return ActivityDetail(
-                                  tag: "imageHeader",
-                                  image: "https://media-manager.noticiasaominuto.com/1920/naom_5caee2ff2dabd.jpg"
-                                );
+                                    tag: "imageHeader",
+                                    image:
+                                        "https://media-manager.noticiasaominuto.com/1920/naom_5caee2ff2dabd.jpg");
                               },
                             ),
                           );
@@ -54,21 +78,15 @@ class Programs extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.only(right: 20.0),
                       child: ImageCardWithBasicFooter(
-                        image: "https://i.pinimg.com/originals/81/4f/aa/814faa73b363bde76e57e743161438ea.jpg",
-                        title: "Easy Start",
-                        firstInfo: "5 min",
-                        secondInfo: "Low",
-                        tag: "imageHeader2"
+                        exercise: this.exercises[1],
+                        tag: "imageHeader2",
                       ),
                     ),
                     Container(
                       margin: EdgeInsets.only(right: 20.0),
                       child: ImageCardWithBasicFooter(
-                        image: "https://www.treinus.com.br/blog/wp-content/uploads/2018/03/O-que-e-HIIT-Entenda-como-ele-pode-te-ajudar-a-queimar-gordura-e-seus-beneficios.jpg",
-                        title: "Easy Start",
-                        firstInfo: "5 min",
-                        secondInfo: "Low",
-                        tag: "imageHeader3"
+                        exercise: this.exercises[2],
+                        tag: "imageHeader3",
                       ),
                     ),
                   ],
@@ -105,21 +123,17 @@ class Programs extends StatelessWidget {
                         title: "Daily Tips",
                         horizontalList: <Widget>[
                           UserTip(
-                            "http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg",
-                            "User Img"
-                          ),
+                              "http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg",
+                              "User Img"),
                           UserTip(
-                            "http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg",
-                            "User Img"
-                          ),
+                              "http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg",
+                              "User Img"),
                           UserTip(
-                            "http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg",
-                            "User Img"
-                          ),
+                              "http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg",
+                              "User Img"),
                           UserTip(
-                            "http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg",
-                            "User Img"
-                          ),
+                              "http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg",
+                              "User Img"),
                         ],
                       ),
                       Section(
@@ -184,9 +198,9 @@ class MainCardPrograms extends StatelessWidget {
       margin: EdgeInsets.only(top: 40.0, left: 20.0, right: 20.0),
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage(
-            "https://i.pinimg.com/originals/13/78/8f/13788f2a063c363eb55b7c7883e989ad.jpg"),
-          fit: BoxFit.fill),
+            image: NetworkImage(
+                "https://i.pinimg.com/originals/13/78/8f/13788f2a063c363eb55b7c7883e989ad.jpg"),
+            fit: BoxFit.fill),
         borderRadius: BorderRadius.all(Radius.circular(20.0)),
         color: Colors.white70,
         boxShadow: [

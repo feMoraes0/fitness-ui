@@ -1,15 +1,14 @@
+import 'package:fitness_flutter/models/exercise.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ImageCardWithBasicFooter extends StatelessWidget {
-  final String image, title, firstInfo, secondInfo, tag;
+  final Exercise exercise;
+  final String tag;
   final double imageWidth;
 
   ImageCardWithBasicFooter({
-    @required this.image,
-    @required this.title,
-    @required this.firstInfo,
-    @required this.secondInfo,
+    @required this.exercise,
     @required this.tag,
     this.imageWidth = 290.0,
   });
@@ -26,7 +25,7 @@ class ImageCardWithBasicFooter extends StatelessWidget {
             height: 160.0,
             child: ClipRRect(
               child: Image.network(
-                this.image,
+                this.exercise.image,
                 fit: BoxFit.fill,
               ),
               borderRadius: BorderRadius.all(
@@ -41,7 +40,7 @@ class ImageCardWithBasicFooter extends StatelessWidget {
           width: this.imageWidth,
           margin: EdgeInsets.only(top: 10.0),
           child: Text(
-            this.title,
+            this.exercise.title,
             textAlign: TextAlign.left,
             style: TextStyle(fontSize: 14.0),
           ),
@@ -50,7 +49,7 @@ class ImageCardWithBasicFooter extends StatelessWidget {
           width: this.imageWidth,
           margin: EdgeInsets.only(top: 5.0),
           child: Text(
-            this.firstInfo + "    |    " + this.secondInfo,
+            this.exercise.time + "    |    " + this.exercise.difficult,
             style: TextStyle(
               fontSize: 12.0,
               color: Colors.grey,

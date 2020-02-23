@@ -1,5 +1,6 @@
 import 'package:fitness_flutter/components/Header.dart';
 import 'package:fitness_flutter/components/ImageCardWithBasicFooter.dart';
+import 'package:fitness_flutter/models/exercise.dart';
 import 'package:flutter/material.dart';
 
 import '../data/Dishes.dart';
@@ -102,13 +103,16 @@ class TabViewBase extends StatelessWidget {
   List<Widget> _renderItem(size) {
     return List<Widget>.generate(dishes.length, (index) {
       var tag = dishes[index]["title"] + index.toString();
+      Exercise exercise = Exercise(
+        image: dishes[index]["image"],
+        title: dishes[index]["title"],
+        time: dishes[index]["time"],
+        difficult: dishes[index]["calories"],
+      );
       return Container(
         margin: EdgeInsets.symmetric(vertical: 20.0),
         child: ImageCardWithBasicFooter(
-          image: dishes[index]["image"],
-          title: dishes[index]["title"],
-          firstInfo: dishes[index]["time"],
-          secondInfo: dishes[index]["calories"],
+          exercise: exercise,
           tag: tag,
           imageWidth: size.width,
         ),
