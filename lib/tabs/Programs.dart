@@ -1,4 +1,4 @@
-import 'package:fitness_flutter/components/DailyTip.dart';
+import 'package:fitness_flutter/components/daily_tip.dart';
 import 'package:fitness_flutter/components/header.dart';
 import 'package:fitness_flutter/components/ImageCardWithBasicFooter.dart';
 import 'package:fitness_flutter/components/Section.dart';
