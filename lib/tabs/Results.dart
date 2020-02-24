@@ -16,7 +16,7 @@ class Results extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: <Widget>[
-              Header("Results"),
+              Header('Results'),
               Container(
                 color: Colors.white,
                 padding: EdgeInsets.fromLTRB(20.0, 25.0, 20.0, 35.0),
@@ -30,7 +30,7 @@ class Results extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Text(
-                        "Body Progress",
+                        'Body Progress',
                         style: TextStyle(
                           color: Color.fromRGBO(190, 130, 255, 1.0),
                           fontSize: 18.0,
@@ -57,7 +57,7 @@ class Results extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      "Achivments",
+                      'Achivments',
                       style: TextStyle(
                         fontSize: 18.0,
                         color: Colors.grey,
@@ -70,24 +70,24 @@ class Results extends StatelessWidget {
                         children: <Widget>[
                           CircleBadge(
                             color: Color.fromRGBO(190, 130, 255, 1.0),
-                            title: "1st",
-                            subtitle: "Workout",
+                            title: '1st',
+                            subtitle: 'Workout',
                           ),
                           CircleBadge(
                             color: Color.fromRGBO(75, 142, 255, 1.0),
-                            title: "1000",
-                            subtitle: "kCal",
+                            title: '1000',
+                            subtitle: 'kCal',
                           ),
                           CircleBadge(
                             color: Color.fromRGBO(255, 255, 255, 1.0),
-                            title: "6000",
-                            subtitle: "kCal",
+                            title: '6000',
+                            subtitle: 'kCal',
                           ),
                         ],
                       ),
                     ),
                     Text(
-                      "You've burned",
+                      'You\'ve burned',
                       style: TextStyle(
                         color: Colors.grey[400],
                       ),
@@ -98,7 +98,7 @@ class Results extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text(
-                            "480 kCal",
+                            '480 kCal',
                             style: TextStyle(
                               fontSize: 18.0,
                               fontWeight: FontWeight.w900,
@@ -106,7 +106,7 @@ class Results extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            "6000 kCal",
+                            '6000 kCal',
                             style: TextStyle(
                               fontSize: 18.0,
                               fontWeight: FontWeight.w900,
@@ -145,7 +145,7 @@ class Results extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      "Weight Progress",
+                      'Weight Progress',
                       style: TextStyle(
                         fontSize: 18.0,
                         color: Colors.grey,
@@ -199,14 +199,14 @@ class Results extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       Text(
-                                        "Weight",
+                                        'Weight',
                                         style: TextStyle(
                                           fontSize: 16.0,
                                           color: Colors.blueGrey[200],
                                         ),
                                       ),
                                       Text(
-                                        "56 Kg",
+                                        '56 Kg',
                                         style: TextStyle(
                                           fontSize: 20.0,
                                           color: Colors.black54,
@@ -222,14 +222,14 @@ class Results extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       Text(
-                                        "Gaind",
+                                        'Gaind',
                                         style: TextStyle(
                                           fontSize: 16.0,
                                           color: Colors.blueGrey[200],
                                         ),
                                       ),
                                       Text(
-                                        "13 Kg",
+                                        '13 Kg',
                                         style: TextStyle(
                                           fontSize: 20.0,
                                           color: Colors.black54,
@@ -255,14 +255,14 @@ class Results extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Text(
-                                  "Goal",
+                                  'Goal',
                                   style: TextStyle(
                                     fontSize: 16.0,
                                     color: Colors.blueGrey[200],
                                   ),
                                 ),
                                 Text(
-                                  "Add +",
+                                  'Add +',
                                   style: TextStyle(
                                     fontSize: 20.0,
                                     color: Color.fromRGBO(190, 129, 255, 1.0),
@@ -281,7 +281,7 @@ class Results extends StatelessWidget {
                         horizontal: 30.0,
                       ),
                       child: Text(
-                        "Track your weight every morning before your breakfast",
+                        'Track your weight every morning before your breakfast',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 18.0,
@@ -298,7 +298,7 @@ class Results extends StatelessWidget {
                         borderRadius: BorderRadius.circular(15.0),
                       ),
                       child: Text(
-                        "Enter today's weight",
+                        'Enter today\'s weight',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color.fromRGBO(190, 130, 255, 1.0),

@@ -10,12 +10,12 @@ class TabViewBase extends StatelessWidget {
 
   List<Widget> _renderItem(Size size) {
     return List<Widget>.generate(dishes.length, (index) {
-      var tag = dishes[index]["title"] + index.toString();
+      var tag = dishes[index]['title'] + index.toString();
       Exercise exercise = Exercise(
-        image: dishes[index]["image"],
-        title: dishes[index]["title"],
-        time: dishes[index]["time"],
-        difficult: dishes[index]["calories"],
+        image: dishes[index]['image'],
+        title: dishes[index]['title'],
+        time: dishes[index]['time'],
+        difficult: dishes[index]['calories'],
       );
       return Container(
         margin: EdgeInsets.symmetric(vertical: 20.0),
@@ -48,7 +48,7 @@ class TabViewBase extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(
-                    "Track my " + this.tabName,
+                    'Track my ' + this.tabName,
                     style: TextStyle(
                       fontSize: 16.0,
                       color: Color.fromRGBO(122, 158, 255, 1.0),

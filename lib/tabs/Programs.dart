@@ -15,21 +15,21 @@ class Programs extends StatelessWidget {
   final List<Exercise> exercises = [
     Exercise(
       image: 'assets/images/image001.jpg',
-      title: "Easy Start",
-      time: "5 min",
-      difficult: "Low",
+      title: 'Easy Start',
+      time: '5 min',
+      difficult: 'Low',
     ),
     Exercise(
       image: 'assets/images/image002.jpg',
-      title: "Medium Start",
-      time: "10 min",
-      difficult: "Medium",
+      title: 'Medium Start',
+      time: '10 min',
+      difficult: 'Medium',
     ),
     Exercise(
       image: 'assets/images/image003.jpg',
-      title: "Pro Start",
-      time: "25 min",
-      difficult: "High",
+      title: 'Pro Start',
+      time: '25 min',
+      difficult: 'High',
     )
   ];
 
@@ -76,16 +76,16 @@ class Programs extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Header(
-                  "Programs",
+                  'Programs',
                   rightSide: UserPhoto(),
                 ),
                 MainCardPrograms(), // MainCard
                 Section(
-                  title: "Fat burning",
+                  title: 'Fat burning',
                   horizontalList: this.generateList(context),
                 ),
                 Section(
-                  title: "Abs Generating",
+                  title: 'Abs Generating',
                   horizontalList: <Widget>[
                     ImageCardWithInternal(
                       image: 'assets/images/image004.jpg',
@@ -113,7 +113,7 @@ class Programs extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
                       Section(
-                        title: "Daily Tips",
+                        title: 'Daily Tips',
                         horizontalList: <Widget>[
                           UserTip(
                             image: 'assets/images/image010.jpg',

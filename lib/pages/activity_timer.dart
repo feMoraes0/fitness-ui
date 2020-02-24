@@ -4,23 +4,19 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class ActivityTimer extends StatelessWidget {
   final String image =
-    "https://i0.wp.com/fitnessrunning.net/wp-content/uploads/2016/10/woman-doing-plank.jpg";
-  final String tag = "imageHeader";
+      'https://i0.wp.com/fitnessrunning.net/wp-content/uploads/2016/10/woman-doing-plank.jpg';
+  final String tag = 'imageHeader';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child:OrientationBuilder(
-          builder: (context, orientation) {
-            return (MediaQuery.of(context).orientation == prefix0.Orientation.portrait)
-              ?
-            Portrait(image: this.image, tag: this.tag)
-              :
-            Landscape(image: this.image, tag: this.tag)
-              ;
-          }
-        ),
+        child: OrientationBuilder(builder: (context, orientation) {
+          return (MediaQuery.of(context).orientation ==
+                  prefix0.Orientation.portrait)
+              ? Portrait(image: this.image, tag: this.tag)
+              : Landscape(image: this.image, tag: this.tag);
+        }),
       ),
     );
   }
@@ -41,12 +37,12 @@ class Portrait extends StatelessWidget {
             Hero(
               tag: this.tag,
               child: Container(
-                width: MediaQuery
-                  .of(context)
-                  .size
-                  .width,
+                width: MediaQuery.of(context).size.width,
                 height: 270,
-                child: Image.network(this.image, fit: BoxFit.fitHeight),
+                child: Image.network(
+                  this.image,
+                  fit: BoxFit.fitHeight,
+                ),
               ),
             ),
             Positioned(
@@ -85,7 +81,7 @@ class Portrait extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 15.0),
                     child: Text(
-                      "Plank",
+                      'Plank',
                       style: TextStyle(
                         fontSize: 28.0,
                         fontWeight: FontWeight.w900,
@@ -96,7 +92,7 @@ class Portrait extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 20.0),
                     child: Text(
-                      "Next: Push-ups",
+                      'Next: Push-ups',
                       style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.w900,
@@ -113,7 +109,7 @@ class Portrait extends StatelessWidget {
                       lineWidth: 16.0,
                       percent: 0.86,
                       center: new Text(
-                        "43",
+                        '43',
                         style: TextStyle(
                           fontSize: 45.0,
                           fontWeight: FontWeight.w900,
@@ -157,7 +153,7 @@ class Portrait extends StatelessWidget {
                     ),
                     child: Center(
                       child: Text(
-                        "Next",
+                        'Next',
                         style: TextStyle(
                           color: Color.fromRGBO(82, 126, 255, 1.0),
                           fontSize: 18.0,
@@ -167,7 +163,7 @@ class Portrait extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),
@@ -187,13 +183,16 @@ class Landscape extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Container(
-          child: Image.network(this.image, fit: BoxFit.fill,),
+          child: Image.network(
+            this.image,
+            fit: BoxFit.fill,
+          ),
         ),
         Positioned(
           top: 40.0,
           left: 40.0,
           child: Text(
-            "Plank",
+            'Plank',
             style: TextStyle(
               fontSize: 28.0,
               fontWeight: FontWeight.w900,
@@ -205,7 +204,7 @@ class Landscape extends StatelessWidget {
           top: 80.0,
           left: 40.0,
           child: Text(
-            "Next: Push-ups",
+            'Next: Push-ups',
             style: TextStyle(
               fontSize: 20.0,
               fontWeight: FontWeight.w900,
@@ -214,48 +213,49 @@ class Landscape extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 30.0,
-          left: size.width - 60.0,
-          child: GestureDetector(
-            child: Container(
-              width: 45.0,
-              height: 45.0,
-              decoration: BoxDecoration(
-                color: Colors.black,
-                shape: BoxShape.circle,
+            top: 30.0,
+            left: size.width - 60.0,
+            child: GestureDetector(
+                child: Container(
+                    width: 45.0,
+                    height: 45.0,
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Icon(
+                      Icons.close,
+                      size: 29.0,
+                      color: Colors.grey[600],
+                    )),
+                onTap: () {
+                  Navigator.pop(context);
+                })),
+        Positioned(
+            left: 40.0,
+            top: size.height - 60.0,
+            child: Text(
+              '43',
+              style: TextStyle(
+                fontSize: 35.0,
+                fontWeight: FontWeight.w900,
+                color: Colors.grey[500],
               ),
-              child: Icon(Icons.close, size: 29.0, color: Colors.grey[600],)
-            ),
-            onTap: () {
-              Navigator.pop(context);
-            }
-          )
-        ),
+            )),
         Positioned(
-          left: 40.0,
-          top: size.height - 60.0,
-          child: Text(
-            "43",
-            style: TextStyle(
-              fontSize: 35.0,
-              fontWeight: FontWeight.w900,
-              color: Colors.grey[500],
-            ),
-          )
-        ),
-        Positioned(
-          top: size.height - 80.0,
-          left: size.width / 2 - 30.0,
-          child: Container(
-            width: 60.0,
-            height: 60.0,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              shape: BoxShape.circle,
-            ),
-            child: Icon(Icons.pause, size: 38.0,)
-          )
-        ),
+            top: size.height - 80.0,
+            left: size.width / 2 - 30.0,
+            child: Container(
+                width: 60.0,
+                height: 60.0,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(
+                  Icons.pause,
+                  size: 38.0,
+                ))),
         Positioned(
           top: size.height - 80.0,
           left: size.width - 170.0,
@@ -268,7 +268,7 @@ class Landscape extends StatelessWidget {
             ),
             child: Center(
               child: Text(
-                "Next",
+                'Next',
                 style: TextStyle(
                   fontSize: 20.0,
                   color: Colors.black87,
@@ -282,6 +282,3 @@ class Landscape extends StatelessWidget {
     );
   }
 }
-
-
-

@@ -15,7 +15,7 @@ class Diet extends StatelessWidget {
               elevation: 0,
               backgroundColor: Colors.white,
               flexibleSpace: Header(
-                "Diet",
+                'Diet',
                 rightSide: Container(
                   height: 35.0,
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -26,7 +26,7 @@ class Diet extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      "Tracker",
+                      'Tracker',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w900,
@@ -40,25 +40,25 @@ class Diet extends StatelessWidget {
                   Container(
                     height: 30.0,
                     child: Tab(
-                      text: "Breakfast",
+                      text: 'Breakfast',
                     ),
                   ),
                   Container(
                     height: 30.0,
                     child: Tab(
-                      text: "Lunch",
+                      text: 'Lunch',
                     ),
                   ),
                   Container(
                     height: 30.0,
                     child: Tab(
-                      text: "Dinner",
+                      text: 'Dinner',
                     ),
                   ),
                   Container(
                     height: 30.0,
                     child: Tab(
-                      text: "Snacks",
+                      text: 'Snacks',
                     ),
                   ),
                 ],
@@ -72,16 +72,16 @@ class Diet extends StatelessWidget {
             body: TabBarView(
               children: <Widget>[
                 TabViewBase(
-                  tabName: "Breakfast",
+                  tabName: 'Breakfast',
                 ),
                 TabViewBase(
-                  tabName: "Lunch",
+                  tabName: 'Lunch',
                 ),
                 TabViewBase(
-                  tabName: "Dinner",
+                  tabName: 'Dinner',
                 ),
                 TabViewBase(
-                  tabName: "Snacks",
+                  tabName: 'Snacks',
                 ),
               ],
             ),
