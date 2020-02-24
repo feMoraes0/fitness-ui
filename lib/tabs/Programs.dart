@@ -1,10 +1,10 @@
 import 'package:fitness_flutter/components/DailyTip.dart';
 import 'package:fitness_flutter/components/Header.dart';
-import 'package:fitness_flutter/components/ImageCardWithInternal.dart';
 import 'package:fitness_flutter/components/UserTip.dart';
 import 'package:fitness_flutter/components/ImageCardWithBasicFooter.dart';
 import 'package:fitness_flutter/components/Section.dart';
 import 'package:fitness_flutter/components/UserPhoto.dart';
+import 'package:fitness_flutter/components/image_card_with_internal.dart';
 import 'package:fitness_flutter/components/main_card_programs.dart';
 import 'package:fitness_flutter/models/exercise.dart';
 import 'package:fitness_flutter/pages/activity_detail.dart';
@@ -88,19 +88,19 @@ class Programs extends StatelessWidget {
                   title: "Abs Generating",
                   horizontalList: <Widget>[
                     ImageCardWithInternal(
-                      "http://laboralclinica.com.br/wp-content/uploads/2018/01/1447701749564a2cf5862e7.jpg",
-                      "Core \nWorkout",
-                      "7 min",
+                      image: 'assets/images/image004.jpg',
+                      title: 'Core \nWorkout',
+                      duration: '7 min',
                     ),
                     ImageCardWithInternal(
-                      "http://laboralclinica.com.br/wp-content/uploads/2018/01/1447701749564a2cf5862e7.jpg",
-                      "Core Workout",
-                      "7 min",
+                      image: 'assets/images/image004.jpg',
+                      title: 'Core \nWorkout',
+                      duration: '7 min',
                     ),
                     ImageCardWithInternal(
-                      "http://laboralclinica.com.br/wp-content/uploads/2018/01/1447701749564a2cf5862e7.jpg",
-                      "Core Workout",
-                      "7 min",
+                      image: 'assets/images/image004.jpg',
+                      title: 'Core \nWorkout',
+                      duration: '7 min',
                     ),
                   ],
                 ),
