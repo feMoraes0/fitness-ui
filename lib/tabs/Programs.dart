@@ -20,15 +20,15 @@ class Programs extends StatelessWidget {
     ),
     Exercise(
       image: 'assets/images/image002.jpg',
-      title: "Easy Start",
-      time: "5 min",
-      difficult: "Low",
+      title: "Medium Start",
+      time: "10 min",
+      difficult: "Medium",
     ),
     Exercise(
       image: 'assets/images/image003.jpg',
-      title: "Easy Start",
-      time: "5 min",
-      difficult: "Low",
+      title: "Pro Start",
+      time: "25 min",
+      difficult: "High",
     )
   ];
 
@@ -49,8 +49,8 @@ class Programs extends StatelessWidget {
               MaterialPageRoute(
                 builder: (_) {
                   return ActivityDetail(
+                    exercise: exercise,
                     tag: 'imageHeader$count',
-                    image: exercise.image,
                   );
                 },
               ),

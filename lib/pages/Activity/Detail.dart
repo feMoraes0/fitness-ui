@@ -1,11 +1,17 @@
+import 'package:fitness_flutter/components/NextStep.dart';
+import 'package:fitness_flutter/models/exercise.dart';
 import 'package:flutter/material.dart';
 
 import 'Timer.dart';
 
 class ActivityDetail extends StatelessWidget {
-  final String image, tag;
+  final String tag;
+  final Exercise exercise;
 
-  ActivityDetail({@required this.image, @required this.tag});
+  ActivityDetail({
+    @required this.exercise,
+    @required this.tag,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +28,10 @@ class ActivityDetail extends StatelessWidget {
                   child: Container(
                     width: MediaQuery.of(context).size.width,
                     height: 270,
-                    child: Image.asset(this.image, fit: BoxFit.fitHeight),
+                    child: Image.asset(
+                      this.exercise.image,
+                      fit: BoxFit.fitHeight,
+                    ),
                   ),
                 ),
                 Positioned(
@@ -57,7 +66,7 @@ class ActivityDetail extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        "Easy Start",
+                        this.exercise.title,
                         style: TextStyle(
                           fontSize: 22.0,
                           color: Colors.blueGrey,
@@ -87,7 +96,7 @@ class ActivityDetail extends StatelessWidget {
                                         color: Colors.blueGrey[300]),
                                   ),
                                   Text(
-                                    "5 min",
+                                    '${this.exercise.time}',
                                     style: TextStyle(
                                         fontSize: 18.0,
                                         color: Colors.lightBlue,
@@ -111,7 +120,7 @@ class ActivityDetail extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    "Low",
+                                    this.exercise.difficult,
                                     style: TextStyle(
                                       fontSize: 18.0,
                                       color: Colors.lightBlue,
@@ -128,22 +137,19 @@ class ActivityDetail extends StatelessWidget {
                         margin: EdgeInsets.only(top: 15.0),
                         child: Column(
                           children: <Widget>[
-                            Step(
-                              image:
-                                  "https://i0.wp.com/fitnessrunning.net/wp-content/uploads/2016/10/woman-doing-plank.jpg",
-                              title: "Plank",
+                            NextStep(
+                              image: 'assets/images/image005.jpg',
+                              title: 'Plank',
                               seconds: 50,
                             ),
-                            Step(
-                              image:
-                                  "https://tonygentilcore.com/wp-content/uploads/2016/02/Female-push-up.jpg",
-                              title: "Push-ups",
+                            NextStep(
+                              image: 'assets/images/image006.jpg',
+                              title: 'Push-ups',
                               seconds: 50,
                             ),
-                            Step(
-                              image:
-                                  "https://www.crunch.com.au/wp-content/uploads/2019/01/arm-kettlebell-exercises.jpg",
-                              title: "Lateral Raise",
+                            NextStep(
+                              image: 'assets/images/image007.jpg',
+                              title: 'Lateral Raise',
                               seconds: 50,
                             ),
                           ],
@@ -190,60 +196,6 @@ class ActivityDetail extends StatelessWidget {
           );
         },
       ),
-    );
-  }
-}
-
-class Step extends StatelessWidget {
-  final String image, title;
-  final int seconds;
-
-  Step({@required this.image, @required this.title, @required this.seconds});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Container(
-          height: 60.0,
-          width: 60.0,
-          margin: EdgeInsets.only(
-            right: 20.0,
-            bottom: 20.0,
-          ),
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: NetworkImage(
-                this.image,
-              ),
-              fit: BoxFit.fitHeight,
-            ),
-            borderRadius: BorderRadius.circular(15.0),
-          ),
-        ),
-        Container(
-          height: 65.0,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(
-                this.title,
-                style: TextStyle(
-                  fontSize: 16.0,
-                  color: Colors.black87,
-                ),
-              ),
-              Text(
-                this.seconds.toString() + " sec",
-                style: TextStyle(
-                  fontSize: 14.0,
-                  color: Colors.blueGrey[200],
-                ),
-              )
-            ],
-          ),
-        )
-      ],
     );
   }
 }
