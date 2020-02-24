@@ -1,11 +1,11 @@
 import 'package:fitness_flutter/components/DailyTip.dart';
 import 'package:fitness_flutter/components/header.dart';
-import 'package:fitness_flutter/components/UserTip.dart';
 import 'package:fitness_flutter/components/ImageCardWithBasicFooter.dart';
 import 'package:fitness_flutter/components/Section.dart';
 import 'package:fitness_flutter/components/image_card_with_internal.dart';
 import 'package:fitness_flutter/components/main_card_programs.dart';
 import 'package:fitness_flutter/components/user_photo.dart';
+import 'package:fitness_flutter/components/user_tip.dart';
 import 'package:fitness_flutter/models/exercise.dart';
 import 'package:fitness_flutter/pages/activity_detail.dart';
 
@@ -116,17 +116,21 @@ class Programs extends StatelessWidget {
                         title: "Daily Tips",
                         horizontalList: <Widget>[
                           UserTip(
-                              "http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg",
-                              "User Img"),
+                            image: 'assets/images/image010.jpg',
+                            name: 'User Img',
+                          ),
                           UserTip(
-                              "http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg",
-                              "User Img"),
+                            image: 'assets/images/image010.jpg',
+                            name: 'User Img',
+                          ),
                           UserTip(
-                              "http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg",
-                              "User Img"),
+                            image: 'assets/images/image010.jpg',
+                            name: 'User Img',
+                          ),
                           UserTip(
-                              "http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg",
-                              "User Img"),
+                            image: 'assets/images/image010.jpg',
+                            name: 'User Img',
+                          ),
                         ],
                       ),
                       Section(

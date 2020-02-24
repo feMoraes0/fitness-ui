@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class UserTip extends StatelessWidget {
+  final String image;
+  final String name;
 
-  final String _image;
-  final String _name;
-
-  UserTip(this._image, this._name);
+  UserTip({
+    @required this.image,
+    @required this.name,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class UserTip extends StatelessWidget {
             height: 105,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: NetworkImage(this._image),
+                image: AssetImage(this.image),
               ),
               borderRadius: BorderRadius.all(Radius.circular(360.0)),
               border: Border.all(color: Colors.white, width: 7.0),
@@ -26,10 +28,11 @@ class UserTip extends StatelessWidget {
           ),
           Container(
             margin: EdgeInsets.only(top: 10.0),
-            child: Text(
-              this._name,
-              style: TextStyle(fontSize: 14.0, color: Colors.black38,)
-            ),
+            child: Text(this.name,
+                style: TextStyle(
+                  fontSize: 14.0,
+                  color: Colors.black38,
+                )),
           )
         ],
       ),
