@@ -32,6 +32,38 @@ class Programs extends StatelessWidget {
     )
   ];
 
+  List<Widget> generateList(BuildContext context) {
+    List<Widget> list = [];
+    int count = 0;
+    exercises.forEach((exercise) {
+      Widget element = Container(
+        margin: EdgeInsets.only(right: 20.0),
+        child: GestureDetector(
+          child: ImageCardWithBasicFooter(
+            exercise: exercise,
+            tag: 'imageHeader$count',
+          ),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) {
+                  return ActivityDetail(
+                    tag: 'imageHeader$count',
+                    image: exercise.image,
+                  );
+                },
+              ),
+            );
+          },
+        ),
+      );
+      list.add(element);
+      count++;
+    });
+    return list;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,44 +81,7 @@ class Programs extends StatelessWidget {
                 MainCardPrograms(), // MainCard
                 Section(
                   title: "Fat burning",
-                  horizontalList: <Widget>[
-                    Container(
-                      margin: EdgeInsets.only(right: 20.0),
-                      child: GestureDetector(
-                        child: ImageCardWithBasicFooter(
-                          exercise: this.exercises[0],
-                          tag: "imageHeader",
-                        ),
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (_) {
-                                return ActivityDetail(
-                                    tag: "imageHeader",
-                                    image:
-                                        "https://media-manager.noticiasaominuto.com/1920/naom_5caee2ff2dabd.jpg");
-                              },
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(right: 20.0),
-                      child: ImageCardWithBasicFooter(
-                        exercise: this.exercises[1],
-                        tag: "imageHeader2",
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(right: 20.0),
-                      child: ImageCardWithBasicFooter(
-                        exercise: this.exercises[2],
-                        tag: "imageHeader3",
-                      ),
-                    ),
-                  ],
+                  horizontalList: this.generateList(context),
                 ),
                 Section(
                   title: "Abs Generating",
