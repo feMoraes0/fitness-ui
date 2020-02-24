@@ -89,7 +89,7 @@ class ActivityDetail extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text(
-                                    "Time",
+                                    'Time',
                                     style: TextStyle(
                                         fontSize: 14.0,
                                         color: Colors.blueGrey[300]),
@@ -112,7 +112,7 @@ class ActivityDetail extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text(
-                                    "Intensity",
+                                    'Intensity',
                                     style: TextStyle(
                                       fontSize: 14.0,
                                       color: Colors.blueGrey[300],
@@ -177,7 +177,7 @@ class ActivityDetail extends StatelessWidget {
                 ),
               ]),
           child: Text(
-            "Start",
+            'Start',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 22.0,

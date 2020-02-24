@@ -12,7 +12,7 @@ class Section extends StatelessWidget {
       margin: EdgeInsets.only(top: 35.0),
       child: Column(
         children: <Widget>[
-          SectionTitle((this.title != null ) ? this.title : ""),
+          SectionTitle((this.title != null ) ? this.title : ''),
           SingleChildScrollView(
             padding: EdgeInsets.only(left: 20.0, top: 10.0),
             scrollDirection: Axis.horizontal,
