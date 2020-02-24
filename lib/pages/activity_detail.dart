@@ -1,4 +1,4 @@
-import 'package:fitness_flutter/components/NextStep.dart';
+import 'package:fitness_flutter/components/next_step.dart';
 import 'package:fitness_flutter/models/exercise.dart';
 import 'package:fitness_flutter/pages/activity_timer.dart';
 import 'package:flutter/material.dart';
