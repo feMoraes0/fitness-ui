@@ -10,34 +10,34 @@ class ImageCardWithBasicFooter extends StatelessWidget {
   ImageCardWithBasicFooter({
     @required this.exercise,
     @required this.tag,
-    this.imageWidth = 290.0,
+    this.imageWidth,
   });
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    double localWidth = size.width * 0.75;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Hero(
           tag: this.tag,
           child: Container(
-            width: this.imageWidth,
+            width: this.imageWidth != null ? this.imageWidth : localWidth,
             height: 160.0,
-            child: ClipRRect(
-              child: Image.network(
-                this.exercise.image,
-                fit: BoxFit.fill,
-              ),
+            decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
-                Radius.circular(
-                  20.0,
-                ),
+                Radius.circular(20.0),
+              ),
+              image: DecorationImage(
+                image: AssetImage(this.exercise.image),
+                fit: BoxFit.cover,
               ),
             ),
           ),
         ),
         Container(
-          width: this.imageWidth,
+          width: this.imageWidth != null ? this.imageWidth : localWidth,
           margin: EdgeInsets.only(top: 10.0),
           child: Text(
             this.exercise.title,
@@ -46,16 +46,16 @@ class ImageCardWithBasicFooter extends StatelessWidget {
           ),
         ),
         Container(
-          width: this.imageWidth,
+          width: this.imageWidth != null ? this.imageWidth : localWidth,
           margin: EdgeInsets.only(top: 5.0),
           child: Text(
-            this.exercise.time + "    |    " + this.exercise.difficult,
+            '${this.exercise.time}    |    ${this.exercise.difficult}',
             style: TextStyle(
               fontSize: 12.0,
               color: Colors.grey,
             ),
           ),
-        )
+        ),
       ],
     );
   }

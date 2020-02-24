@@ -13,22 +13,19 @@ import 'package:flutter/material.dart';
 class Programs extends StatelessWidget {
   final List<Exercise> exercises = [
     Exercise(
-      image:
-          "https://media-manager.noticiasaominuto.com/1920/naom_5caee2ff2dabd.jpg",
+      image: 'assets/images/image001.jpg',
       title: "Easy Start",
       time: "5 min",
       difficult: "Low",
     ),
     Exercise(
-      image:
-          "https://i.pinimg.com/originals/81/4f/aa/814faa73b363bde76e57e743161438ea.jpg",
+      image: 'assets/images/image002.jpg',
       title: "Easy Start",
       time: "5 min",
       difficult: "Low",
     ),
     Exercise(
-      image:
-          "https://www.treinus.com.br/blog/wp-content/uploads/2018/03/O-que-e-HIIT-Entenda-como-ele-pode-te-ajudar-a-queimar-gordura-e-seus-beneficios.jpg",
+      image: 'assets/images/image003.jpg',
       title: "Easy Start",
       time: "5 min",
       difficult: "Low",
