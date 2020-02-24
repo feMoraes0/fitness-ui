@@ -6,7 +6,7 @@ import 'package:fitness_flutter/components/ImageCardWithBasicFooter.dart';
 import 'package:fitness_flutter/components/Section.dart';
 import 'package:fitness_flutter/components/UserPhoto.dart';
 import 'package:fitness_flutter/models/exercise.dart';
-import 'package:fitness_flutter/pages/Activity/Detail.dart';
+import 'package:fitness_flutter/pages/activity_detail.dart';
 
 import 'package:flutter/material.dart';
 

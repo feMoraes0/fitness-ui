@@ -1,8 +1,7 @@
 import 'package:fitness_flutter/components/NextStep.dart';
 import 'package:fitness_flutter/models/exercise.dart';
+import 'package:fitness_flutter/pages/activity_timer.dart';
 import 'package:flutter/material.dart';
-
-import 'Timer.dart';
 
 class ActivityDetail extends StatelessWidget {
   final String tag;
