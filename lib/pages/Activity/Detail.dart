@@ -22,7 +22,7 @@ class ActivityDetail extends StatelessWidget {
                   child: Container(
                     width: MediaQuery.of(context).size.width,
                     height: 270,
-                    child: Image.network(this.image, fit: BoxFit.fitHeight),
+                    child: Image.asset(this.image, fit: BoxFit.fitHeight),
                   ),
                 ),
                 Positioned(
@@ -51,100 +51,107 @@ class ActivityDetail extends StatelessWidget {
             Stack(
               children: <Widget>[
                 Container(
-                    padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 20.0),
-                    width: width,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          "Easy Start",
-                          style: TextStyle(
-                            fontSize: 22.0,
-                            color: Colors.blueGrey,
-                          ),
+                  padding: EdgeInsets.fromLTRB(20.0, 30.0, 20.0, 20.0),
+                  width: width,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        "Easy Start",
+                        style: TextStyle(
+                          fontSize: 22.0,
+                          color: Colors.blueGrey,
                         ),
-                        Container(
-                          padding: EdgeInsets.all(20.0),
-                          margin: EdgeInsets.only(top: 20.0, bottom: 20.0),
-                          height: 90.0,
-                          decoration: BoxDecoration(
-                              color: Color.fromRGBO(231, 241, 255, 1.0),
-                              borderRadius: BorderRadius.circular(15.0)),
-                          child: Row(
-                            children: <Widget>[
-                              Container(
-                                margin: EdgeInsets.only(right: 55.0),
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      "Time",
-                                      style: TextStyle(
-                                          fontSize: 14.0,
-                                          color: Colors.blueGrey[300]),
-                                    ),
-                                    Text(
-                                      "5 min",
-                                      style: TextStyle(
-                                          fontSize: 18.0,
-                                          color: Colors.lightBlue,
-                                          fontWeight: FontWeight.w900),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(right: 45.0),
-                                child: Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      "Intensity",
-                                      style: TextStyle(
-                                          fontSize: 14.0,
-                                          color: Colors.blueGrey[300]),
-                                    ),
-                                    Text(
-                                      "Low",
-                                      style: TextStyle(
-                                          fontSize: 18.0,
-                                          color: Colors.lightBlue,
-                                          fontWeight: FontWeight.w900),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.all(20.0),
+                        margin: EdgeInsets.only(top: 20.0, bottom: 20.0),
+                        height: 90.0,
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(231, 241, 255, 1.0),
+                          borderRadius: BorderRadius.circular(15.0),
                         ),
-                        Container(
-                          margin: EdgeInsets.only(top: 15.0),
-                          child: Column(
-                            children: <Widget>[
-                              Step(
-                                image: "https://i0.wp.com/fitnessrunning.net/wp-content/uploads/2016/10/woman-doing-plank.jpg",
-                                title: "Plank",
-                                seconds: 50
+                        child: Row(
+                          children: <Widget>[
+                            Container(
+                              margin: EdgeInsets.only(right: 55.0),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    "Time",
+                                    style: TextStyle(
+                                        fontSize: 14.0,
+                                        color: Colors.blueGrey[300]),
+                                  ),
+                                  Text(
+                                    "5 min",
+                                    style: TextStyle(
+                                        fontSize: 18.0,
+                                        color: Colors.lightBlue,
+                                        fontWeight: FontWeight.w900),
+                                  ),
+                                ],
                               ),
-                              Step(
-                                image: "https://tonygentilcore.com/wp-content/uploads/2016/02/Female-push-up.jpg",
-                                title: "Push-ups",
-                                seconds: 50
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right: 45.0),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    "Intensity",
+                                    style: TextStyle(
+                                      fontSize: 14.0,
+                                      color: Colors.blueGrey[300],
+                                    ),
+                                  ),
+                                  Text(
+                                    "Low",
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      color: Colors.lightBlue,
+                                      fontWeight: FontWeight.w900,
+                                    ),
+                                  ),
+                                ],
                               ),
-                              Step(
-                                image: "https://www.crunch.com.au/wp-content/uploads/2019/01/arm-kettlebell-exercises.jpg",
-                                title: "Lateral Raise",
-                                seconds: 50
-                              ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
-                      ],
-                    )),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 15.0),
+                        child: Column(
+                          children: <Widget>[
+                            Step(
+                              image:
+                                  "https://i0.wp.com/fitnessrunning.net/wp-content/uploads/2016/10/woman-doing-plank.jpg",
+                              title: "Plank",
+                              seconds: 50,
+                            ),
+                            Step(
+                              image:
+                                  "https://tonygentilcore.com/wp-content/uploads/2016/02/Female-push-up.jpg",
+                              title: "Push-ups",
+                              seconds: 50,
+                            ),
+                            Step(
+                              image:
+                                  "https://www.crunch.com.au/wp-content/uploads/2019/01/arm-kettlebell-exercises.jpg",
+                              title: "Lateral Raise",
+                              seconds: 50,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             )
           ],
@@ -188,7 +195,6 @@ class ActivityDetail extends StatelessWidget {
 }
 
 class Step extends StatelessWidget {
-
   final String image, title;
   final int seconds;
 
@@ -201,30 +207,42 @@ class Step extends StatelessWidget {
         Container(
           height: 60.0,
           width: 60.0,
-          margin: EdgeInsets.only(right: 20.0, bottom: 20.0),
+          margin: EdgeInsets.only(
+            right: 20.0,
+            bottom: 20.0,
+          ),
           decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: NetworkImage(
-                    this.image,
-                  ),
-                  fit: BoxFit.fitHeight),
-              borderRadius: BorderRadius.circular(15.0)),
+            image: DecorationImage(
+              image: NetworkImage(
+                this.image,
+              ),
+              fit: BoxFit.fitHeight,
+            ),
+            borderRadius: BorderRadius.circular(15.0),
+          ),
         ),
         Container(
-            height: 65.0,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(
-                  this.title,
-                  style: TextStyle(fontSize: 16.0, color: Colors.black87),
+          height: 65.0,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                this.title,
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: Colors.black87,
                 ),
-                Text(
-                  this.seconds.toString() + " sec",
-                  style: TextStyle(fontSize: 14.0, color: Colors.blueGrey[200]),
-                )
-              ],
-            ))
+              ),
+              Text(
+                this.seconds.toString() + " sec",
+                style: TextStyle(
+                  fontSize: 14.0,
+                  color: Colors.blueGrey[200],
+                ),
+              )
+            ],
+          ),
+        )
       ],
     );
   }
