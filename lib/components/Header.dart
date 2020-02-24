@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
 
-  final String _title;
+  final String title;
   final Widget rightSide;
 
-  Header(this._title, {this.rightSide});
+  Header(this.title, {this.rightSide});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class Header extends StatelessWidget {
         Container(
           alignment: Alignment.center,
           child: Text(
-            this._title,
+            this.title,
             style: TextStyle(
               fontSize: 28,
               color: Colors.grey[600],

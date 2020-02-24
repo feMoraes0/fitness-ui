@@ -10,8 +10,8 @@ class UserPhoto extends StatelessWidget {
       margin: EdgeInsets.only(right: 20.0),
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage(
-            'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',
+          image: AssetImage(
+            'assets/images/image009.jpg',
           ),
           fit: BoxFit.fill,
         ),
