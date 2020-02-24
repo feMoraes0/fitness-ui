@@ -1,5 +1,5 @@
 import 'package:fitness_flutter/components/Header.dart';
-import 'package:fitness_flutter/components/ImageCardWithBasicFooter.dart';
+import 'package:fitness_flutter/components/image_card_with_basic_footer.dart';
 import 'package:fitness_flutter/models/exercise.dart';
 import 'package:flutter/material.dart';
 

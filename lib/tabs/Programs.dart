@@ -1,7 +1,7 @@
 import 'package:fitness_flutter/components/daily_tip.dart';
 import 'package:fitness_flutter/components/header.dart';
-import 'package:fitness_flutter/components/ImageCardWithBasicFooter.dart';
-import 'package:fitness_flutter/components/Section.dart';
+import 'package:fitness_flutter/components/image_card_with_basic_footer.dart';
+import 'package:fitness_flutter/components/section.dart';
 import 'package:fitness_flutter/components/image_card_with_internal.dart';
 import 'package:fitness_flutter/components/main_card_programs.dart';
 import 'package:fitness_flutter/components/user_photo.dart';
